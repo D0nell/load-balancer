@@ -1,0 +1,16 @@
+services:
+  load_balancer:
+    image: load-balancer-image:latest
+    container_name: load_balancer_cb
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "5000:5000"
+    networks:
+      - net1
+    privileged: true
+    restart: always
+
+networks:
+  net1:
+    external: true
