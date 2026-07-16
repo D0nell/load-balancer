@@ -10,13 +10,22 @@ load-balancer/
 ├── load_balancer/
 │   ├── consistent_hash.py      # Task 2 — Consistent hash ring
 │   ├── load_balancer.py        # Task 3 — Load balancer Flask app
-│   └── Dockerfile
+│   ├── Dockerfile
+│   └── tests/
 ├── analysis/
 │   ├── test.py                 # Task 4 — Async load testing + charts
 │   ├── a1_bar_chart.png
 │   └── a2_line_chart.png
+├── tests/
+│   ├── __init__.py
+│   ├── conftest.py
+│   ├── test_consistent_hash.py
+│   ├── test_load_balancer_api.py
+│   ├── test_results.txt
+│   └── test_results_screenshot.png
 ├── docker-compose.yml
 ├── Makefile
+├── requirements-test.txt
 └── README.md
 ```
 
@@ -185,8 +194,8 @@ algorithm itself.
 
    ## Running Tests
 
-Unit and API tests are mocked — they don't require Docker or a running
-network, so they run in seconds.
-
 pip install -r requirements-test.txt
 pytest tests/ -v
+
+**Result:** 15/15 tests passed (see `tests/test_results.txt` for full output,
+`tests/test_results_screenshot.png` for a screenshot of the run).
