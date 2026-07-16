@@ -192,10 +192,15 @@ algorithm itself.
    Φ(i,j) polynomial on sequential IDs, for the reasons documented in Task 2
    and A-4 above.
 
-   ## Running Tests
+## Running Tests
 
+```bash
 pip install -r requirements-test.txt
 pytest tests/ -v
+```
 
-**Result:** 15/15 tests passed (see `tests/test_results.txt` for full output,
-`tests/test_results_screenshot.png` for a screenshot of the run).
+**Result:** 15/15 tests passed.
+
+Full output: `tests/test_results.txt`
+
+![Pytest run screenshot](tests/test_results_screenshot.png)
