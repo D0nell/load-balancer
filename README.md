@@ -182,3 +182,11 @@ algorithm itself.
 5. Virtual server placement uses `MD5(server_name:j) % M` instead of the raw
    Φ(i,j) polynomial on sequential IDs, for the reasons documented in Task 2
    and A-4 above.
+
+   ## Running Tests
+
+Unit and API tests are mocked — they don't require Docker or a running
+network, so they run in seconds.
+
+pip install -r requirements-test.txt
+pytest tests/ -v
