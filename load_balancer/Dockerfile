@@ -11,7 +11,10 @@ RUN echo "root ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir flask requests
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
 
 COPY consistent_hash.py .
 COPY load_balancer.py .

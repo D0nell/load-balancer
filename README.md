@@ -6,16 +6,19 @@
 load-balancer/
 ├── server/
 │   ├── server.py               # Task 1 — Flask web server
-│   └── Dockerfile
+│   ├── Dockerfile
+│   └── requirements.txt
 ├── load_balancer/
 │   ├── consistent_hash.py      # Task 2 — Consistent hash ring
 │   ├── load_balancer.py        # Task 3 — Load balancer Flask app
 │   ├── Dockerfile
+│   ├── requirements.txt
 │   └── tests/
 ├── analysis/
 │   ├── test.py                 # Task 4 — Async load testing + charts
 │   ├── a1_bar_chart.png
-│   └── a2_line_chart.png
+│   ├── a2_line_chart.png
+│   └── requirements.txt
 ├── tests/
 │   ├── __init__.py
 │   ├── conftest.py
@@ -103,7 +106,7 @@ make down
 ## Running the Analysis (Task 4)
 
 ```bash
-pip install aiohttp matplotlib requests
+pip install -r analysis/requirements.txt
 python analysis/test.py        # runs all experiments
 python analysis/test.py a1     # bar chart only
 python analysis/test.py a2     # line chart only
