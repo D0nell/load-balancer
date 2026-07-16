@@ -203,4 +203,4 @@ pytest tests/ -v
 
 Full output: `tests/test_results.txt`
 
-![Pytest run screenshot](tests/test_results_screenshot.png)
+![Pytest run screenshot](tests/tests_results_screenshot.png)
